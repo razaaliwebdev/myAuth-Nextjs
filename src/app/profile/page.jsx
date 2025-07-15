@@ -47,7 +47,7 @@ const Profile = () => {
       <button
         onClick={handleLogout}
         disabled={loading}
-        className={`mt-6 w-full py-2 px-4 rounded-md transition duration-200 ${
+        className={`mt-6 w-full py-2 px-4 rounded-md cursor-pointer transition duration-200 ${
           loading ? "bg-gray-400" : "bg-red-600 hover:bg-red-700"
         } text-white`}
       >

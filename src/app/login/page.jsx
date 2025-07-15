@@ -50,7 +50,7 @@ const Login = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded-xl shadow-md dark:bg-gray-900">
+      <div className="max-w-md mx-auto mt-20 p-6  rounded-xl shadow-md  border border-indigo-200">
         <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-600">
           Welcome Back
         </h2>
@@ -59,7 +59,7 @@ const Login = () => {
           <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-gray-700 dark:text-gray-200"
+              className="text-sm font-medium text-gray-700 "
             >
               Email
             </label>
@@ -70,14 +70,14 @@ const Login = () => {
               onChange={(e) => setData({ ...data, email: e.target.value })}
               placeholder="you@example.com"
               required
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500  border-indigo-400"
             />
           </div>
 
           <div className="flex flex-col">
             <label
               htmlFor="password"
-              className="text-sm font-medium text-gray-700 dark:text-gray-200"
+              className="text-sm font-medium text-gray-700 "
             >
               Password
             </label>
@@ -88,7 +88,7 @@ const Login = () => {
               onChange={(e) => setData({ ...data, password: e.target.value })}
               placeholder="********"
               required
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500  border-indigo-400"
             />
           </div>
 
@@ -96,8 +96,8 @@ const Login = () => {
             onClick={onLogin}
             type="submit"
             disabled={loading}
-            className={`w-full py-2 px-4 rounded-md transition duration-200 ${
-              loading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
+            className={`w-full py-2 px-4 rounded-md transition cursor-pointer duration-200 ${
+              loading ? "bg-gray-400" : "bg-indigo-600  hover:bg-indigo-700"
             } text-white`}
           >
             {loading ? "Logging in..." : "Login"}

@@ -51,16 +51,16 @@ const Register = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded-xl shadow-md dark:bg-gray-900">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-600">
+      <div className="max-w-md mx-auto mt-20 p-6  rounded-xl shadow-md border border-indigo-200">
+        <h2 className="text-3xl font-semibold mb-6 text-center  text-indigo-600">
           Create Account
         </h2>
 
-        <form method="POST" className="space-y-6" onSubmit={onRegister}>
-          <div className="flex flex-col">
+        <form method="POST" className="space-y-6 " onSubmit={onRegister}>
+          <div className="flex flex-col ">
             <label
               htmlFor="name"
-              className="text-sm font-medium text-gray-700 dark:text-gray-200"
+              className="text-sm font-medium text-gray-700 "
             >
               Name
             </label>
@@ -71,14 +71,14 @@ const Register = () => {
               value={data.name}
               onChange={(e) => setData({ ...data, name: e.target.value })}
               placeholder="John Doe"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 border-indigo-400 "
             />
           </div>
 
           <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="text-sm font-medium text-gray-700 dark:text-gray-200"
+              className="text-sm font-medium text-gray-700 "
             >
               Email
             </label>
@@ -89,14 +89,14 @@ const Register = () => {
               value={data.email}
               onChange={(e) => setData({ ...data, email: e.target.value })}
               placeholder="john@example.com"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 border-indigo-400 "
             />
           </div>
 
           <div className="flex flex-col">
             <label
               htmlFor="password"
-              className="text-sm font-medium text-gray-700 dark:text-gray-200"
+              className="text-sm font-medium text-gray-700 "
             >
               Password
             </label>
@@ -107,14 +107,14 @@ const Register = () => {
               value={data.password}
               onChange={(e) => setData({ ...data, password: e.target.value })}
               placeholder="********"
-              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white"
+              className="mt-1 w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 border-indigo-400 "
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className={`w-full py-2 px-4 text-white rounded-md transition duration-200 ${
+            className={`w-full py-2 px-4 text-white cursor-pointer rounded-md transition duration-200 ${
               loading
                 ? "bg-indigo-400 cursor-not-allowed"
                 : "bg-indigo-600 hover:bg-indigo-700"
